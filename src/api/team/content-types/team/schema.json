@@ -1,10 +1,10 @@
 {
   "kind": "collectionType",
-  "collectionName": "blogs",
+  "collectionName": "teams",
   "info": {
-    "singularName": "blog",
-    "pluralName": "blogs",
-    "displayName": "Blog",
+    "singularName": "team",
+    "pluralName": "teams",
+    "displayName": "Team",
     "description": ""
   },
   "options": {
@@ -16,7 +16,7 @@
     }
   },
   "attributes": {
-    "Title": {
+    "name": {
       "pluginOptions": {
         "i18n": {
           "localized": true
@@ -24,30 +24,28 @@
       },
       "type": "string",
       "required": true,
-      "unique": true,
-      "maxLength": 255
+      "unique": false
     },
-    "Slug": {
+    "slug": {
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
       },
       "type": "uid",
-      "targetField": "Title",
+      "targetField": "name",
       "required": true
     },
-    "Description": {
+    "description": {
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
       },
       "type": "text",
-      "maxLength": 350,
       "required": true
     },
-    "Image": {
+    "image": {
       "type": "media",
       "multiple": false,
       "required": true,
@@ -60,17 +58,38 @@
         }
       }
     },
-    "Body": {
+    "body": {
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
       },
-      "type": "customField",
-      "options": {
-        "preset": "toolbarBaloon"
+      "type": "richtext",
+      "required": true
+    },
+    "facebook": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
       },
-      "customField": "plugin::ckeditor5.CKEditor"
+      "type": "string"
+    },
+    "instagram": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "string"
+    },
+    "twitter": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "string"
     }
   }
 }
