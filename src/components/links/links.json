@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_links_links",
+  "info": {
+    "displayName": "links",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "service": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::service.service"
+    },
+    "icon": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

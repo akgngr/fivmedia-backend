@@ -1,14 +1,14 @@
 {
-  "kind": "collectionType",
-  "collectionName": "services",
+  "kind": "singleType",
+  "collectionName": "about_video_components",
   "info": {
-    "singularName": "service",
-    "pluralName": "services",
-    "displayName": "Service",
+    "singularName": "about-video-component",
+    "pluralName": "about-video-components",
+    "displayName": "About Video Component",
     "description": ""
   },
   "options": {
-    "draftAndPublish": true
+    "draftAndPublish": false
   },
   "pluginOptions": {
     "i18n": {
@@ -16,24 +16,22 @@
     }
   },
   "attributes": {
-    "title": {
+    "small_title": {
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
       },
       "type": "string",
-      "required": true,
-      "unique": true
+      "required": true
     },
-    "Slug": {
+    "big_title": {
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
       },
-      "type": "uid",
-      "targetField": "title",
+      "type": "string",
       "required": true
     },
     "description": {
@@ -43,9 +41,19 @@
         }
       },
       "type": "text",
+      "required": true,
+      "maxLength": 300
+    },
+    "video_url": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "string",
       "required": true
     },
-    "image": {
+    "video_img": {
       "type": "media",
       "multiple": false,
       "required": true,
@@ -57,18 +65,6 @@
           "localized": true
         }
       }
-    },
-    "body": {
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
-      "type": "customField",
-      "options": {
-        "preset": "blockBaloon"
-      },
-      "customField": "plugin::ckeditor5.CKEditor"
     }
   }
 }

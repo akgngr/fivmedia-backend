@@ -60,7 +60,7 @@
         }
       }
     },
-    "Body": {
+    "body": {
       "pluginOptions": {
         "i18n": {
           "localized": true
@@ -68,7 +68,7 @@
       },
       "type": "customField",
       "options": {
-        "preset": "toolbarBaloon"
+        "preset": "blockBaloon"
       },
       "customField": "plugin::ckeditor5.CKEditor"
     }

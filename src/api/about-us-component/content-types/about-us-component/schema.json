@@ -1,14 +1,13 @@
 {
-  "kind": "collectionType",
-  "collectionName": "services",
+  "kind": "singleType",
+  "collectionName": "about_us_components",
   "info": {
-    "singularName": "service",
-    "pluralName": "services",
-    "displayName": "Service",
-    "description": ""
+    "singularName": "about-us-component",
+    "pluralName": "about-us-components",
+    "displayName": "About Us Component"
   },
   "options": {
-    "draftAndPublish": true
+    "draftAndPublish": false
   },
   "pluginOptions": {
     "i18n": {
@@ -16,7 +15,7 @@
     }
   },
   "attributes": {
-    "title": {
+    "small_title": {
       "pluginOptions": {
         "i18n": {
           "localized": true
@@ -24,17 +23,17 @@
       },
       "type": "string",
       "required": true,
-      "unique": true
+      "maxLength": 120
     },
-    "Slug": {
+    "big_title": {
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
       },
-      "type": "uid",
-      "targetField": "title",
-      "required": true
+      "type": "string",
+      "required": true,
+      "maxLength": 250
     },
     "description": {
       "pluginOptions": {
@@ -43,32 +42,21 @@
         }
       },
       "type": "text",
-      "required": true
+      "required": true,
+      "maxLength": 300
     },
     "image": {
-      "type": "media",
-      "multiple": false,
-      "required": true,
       "allowedTypes": [
         "images"
       ],
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      }
-    },
-    "body": {
+      "type": "media",
+      "multiple": false,
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
       },
-      "type": "customField",
-      "options": {
-        "preset": "blockBaloon"
-      },
-      "customField": "plugin::ckeditor5.CKEditor"
+      "required": true
     }
   }
 }

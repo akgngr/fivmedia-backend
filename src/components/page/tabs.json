@@ -1,0 +1,29 @@
+{
+  "collectionName": "components_page_tabs",
+  "info": {
+    "displayName": "tabs"
+  },
+  "options": {},
+  "attributes": {
+    "tab_title": {
+      "type": "string",
+      "required": true
+    },
+    "body": {
+      "type": "customField",
+      "options": {
+        "preset": "toolbarBaloon"
+      },
+      "required": true,
+      "customField": "plugin::ckeditor5.CKEditor"
+    },
+    "image": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    }
+  }
+}
