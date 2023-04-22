@@ -71,6 +71,21 @@
         "preset": "blockBaloon"
       },
       "customField": "plugin::ckeditor5.CKEditor"
+    },
+    "author": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::author.author"
+    },
+    "blog_category": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::blog-category.blog-category"
+    },
+    "blog_tag": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::blog-tag.blog-tag"
     }
   }
 }
